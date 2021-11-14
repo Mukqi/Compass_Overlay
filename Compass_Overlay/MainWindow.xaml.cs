@@ -35,5 +35,21 @@ namespace Compass_Overlay
         {
             this.Close();
         }
+
+        private void SetSizeLarge_Click(object sender, EventArgs e)
+        {
+            Application.Current.MainWindow.MaxHeight = 240;
+            Application.Current.MainWindow.MaxWidth = 240;
+        }
+        private void SetSizeMedium_Click(object sender, EventArgs e)
+        {
+            Application.Current.MainWindow.MaxHeight = 128;
+            Application.Current.MainWindow.MaxWidth = 128;
+        }
+        private void SetSizeSmall_Click(object sender, EventArgs e)
+        {
+            Application.Current.MainWindow.MaxHeight = 64;
+            Application.Current.MainWindow.MaxWidth = 64;
+        }
     }
 }

@@ -9,22 +9,25 @@
         Topmost="True"
         WindowStyle="None" AllowsTransparency="True"
         SizeToContent="WidthAndHeight"
-        Title="MainWindow" Height="144" Width="128">
+        MaxHeight="240" MaxWidth="240"
+        Title="Compass Overlay" Height="128" Width="128">
     <Window.Background>
         <SolidColorBrush Color="Transparent" />
     </Window.Background>
 
-    <Grid Margin="0,0,0,17" Width="129">
+    <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Focusable="True" ToolTip="Options"/>
             <RowDefinition Height="Auto" ToolTip="Compass"/>
         </Grid.RowDefinitions>
         <Image HorizontalAlignment="Center" 
-               VerticalAlignment="Top"
-               Source="/compass2.png" Grid.RowSpan="2">
+               VerticalAlignment="Center"
+               Source="/compass2.png">
             <Image.ContextMenu>
                 <ContextMenu>
                     <MenuItem Click="CloseButton_Click" Header="Close" />
+                    <MenuItem Click="SetSizeLarge_Click" Header="Large" />
+                    <MenuItem Click="SetSizeMedium_Click" Header="Medium" />
+                    <MenuItem Click="SetSizeSmall_Click" Header="Small" />
                 </ContextMenu>
             </Image.ContextMenu>
         </Image>
